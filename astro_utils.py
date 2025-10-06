@@ -104,13 +104,6 @@ def dhruva_protha_chakra_yantra(lat, decl, t_solar):
         "radius": radius
     }
 
-def yantra_samrat(lat, decl, t_solar):
-    return {
-        "instrument":"Yantra-Samrat",
-        "Samrat": samrat_yantra(lat, decl, t_solar),
-        "DhruvaProthaChakra": dhruva_protha_chakra_yantra(lat, decl, t_solar)
-    }
-
 def golayantra_chakra_yantra(lat, decl, t_solar):
     H = hour_angle(t_solar)
     alpha = altitude(lat, decl, H)
@@ -205,7 +198,6 @@ def compute_all_yantras(lat, decl, t_solar):
         "Rama": rama_yantra(lat, decl, t_solar),
         "Digamsa": digamsa_yantra(lat, decl, t_solar),
         "DhruvaProthaChakra": dhruva_protha_chakra_yantra(lat, decl, t_solar),
-        "YantraSamrat": yantra_samrat(lat, decl, t_solar),
         "GolayantraChakra": golayantra_chakra_yantra(lat, decl, t_solar),
         "Bhitti": bhitti_yantra(lat, decl, t_solar),
         "DakshinottaraBhitti": dakshinottara_bhitti_yantra(lat, decl, t_solar),
